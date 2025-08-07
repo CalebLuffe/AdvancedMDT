@@ -3,7 +3,9 @@ AdvancedMDT & Dispatch System for FiveM RP
 
 Overview
 --------
-AdvancedMDT is a modular Mobile Data Terminal and Dispatch System for FiveM RP servers. It integrates with emergency services (police, fire, EMS) and provides advanced features for evidence collection, case management, NPC witness generation, scenario tracking, and officer reputation. The system supports ESX, QBCore, and custom frameworks.
+The Intention of the AdvancedMDT is to be a modular Mobile Data Terminal and Dispatch System for FiveM RP servers. 
+It integrates with emergency services (police, fire, EMS) and provides advanced features for evidence collection, case management, NPC witness generation, scenario tracking, and officer reputation. 
+The system should supports ESX, QBCore, and custom frameworks.
 
 Features
 --------
@@ -63,4 +65,4 @@ Troubleshooting
 
 Support
 -------
-For further help, consult the documentation in each script file or reach out to the FiveM
+This is highly experimental and has not been fully tested yet, still Alpha stage and cleaning up code as we speak. Looking for constructive help 
