@@ -20,11 +20,24 @@ Features
 Installation
 ------------
 1. **Database Setup**
-   - Import the provided `sql/schema.sql` file into your MySQL database.
+   - Import the provided `sql/schema.sql` file into your MySQL database first, then the others.
 
 2. **Resource Setup**
-   - Place all server and client Lua scripts in your FiveM resource folder (e.g., `advancedmdt`).
+   - Place all server and client Lua scripts in your FiveM resource folder (e.g., `advanced-mdt`).
    - Place the React frontend in the `web` folder and build it for NUI usage.
+   - Ensure you have these frameworks:
+         qbx_core
+         qb_core
+
+      and these dependencies:
+         oxmysql
+         ox_lib
+         fivem-mysql-async
+         es_extended
+         esx_vehicleshop
+         esx_society
+
+   ** Note - make sure that all dependencies are started before you start Advanced-MDT.
 
 3. **Configuration**
    - Edit `config.lua` to set your framework (`QBCore` or `ESX`) and job names for permissions.
@@ -65,4 +78,6 @@ Troubleshooting
 
 Support
 -------
-This is highly experimental and has not been fully tested yet, still Alpha stage and cleaning up code as we speak. Looking for constructive help 
+This is highly experimental and has not been fully tested yet, still Alpha stage and cleaning up code as we speak. 
+Looking for constructive help and code testing
+
