@@ -1,11 +1,9 @@
-Advanced-MDT & Dispatch System for FiveM RP
+AdvancedMDT & Dispatch System for FiveM RP
 ==========================================
 
 Overview
 --------
-The Intention of the Advanced-MDT is to be a modular Mobile Data Terminal and Dispatch System for FiveM RP servers. 
-It integrates with emergency services (police, fire, EMS) and provides advanced features for evidence collection, case management, NPC witness generation, scenario tracking, and officer reputation. 
-The system should supports ESX, QBCore, and custom frameworks.
+AdvancedMDT is a modular Mobile Data Terminal and Dispatch System for FiveM RP servers. It integrates with emergency services (police, fire, EMS) and provides advanced features for evidence collection, case management, NPC witness generation, scenario tracking, and officer reputation. The system supports ESX, QBCore, and custom frameworks.
 
 Features
 --------
@@ -20,31 +18,18 @@ Features
 Installation
 ------------
 1. **Database Setup**
-   - Import the provided `sql/schema.sql` file into your MySQL database first, then the others.
+   - Import the provided `sql/schema.sql` file into your MySQL database.
 
 2. **Resource Setup**
-   - Place all server and client Lua scripts in your FiveM resource folder (e.g., `advanced-mdt`).
+   - Place all server and client Lua scripts in your FiveM resource folder (e.g., `advancedmdt`).
    - Place the React frontend in the `web` folder and build it for NUI usage.
-   - Ensure you have these frameworks:
-         qbx_core
-         qb_core
-
-      and these dependencies:
-         oxmysql
-         ox_lib
-         fivem-mysql-async
-         es_extended
-         esx_vehicleshop
-         esx_society
-
-   ** Note - make sure that all dependencies are started before you start Advanced-MDT.
 
 3. **Configuration**
    - Edit `config.lua` to set your framework (`QBCore` or `ESX`) and job names for permissions.
    - Ensure your database credentials are set for `oxmysql`.
 
 4. **Server Integration**
-   - Add `ensure advanced-mdt` to your `server.cfg`.
+   - Add `ensure advancedmdt` to your `server.cfg`.
    - Make sure `oxmysql` is installed and running.
 
 5. **NUI Integration**
@@ -78,6 +63,4 @@ Troubleshooting
 
 Support
 -------
-This is highly experimental and has not been fully tested yet, still Alpha stage and cleaning up code as we speak. 
-Looking for constructive help and code testing
-
+For further help, consult the documentation in each script file or reach out to the FiveM
