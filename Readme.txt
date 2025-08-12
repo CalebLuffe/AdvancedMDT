@@ -15,6 +15,19 @@ Features
 - Role-based permissions for police, judges, and admins
 - Robust MDT UI with search, sorting, pagination, and export functionality
 
+Requirements
+------------
+Make sure you have the following dependencies installed and started before you start this mod:
+
+   - fivem-mysql-async
+   - es_extended
+   - esx_vehicleshop
+   - esx_society
+   - oxmysql
+   - ox_lib
+
+** Note: This should work on both gb_core and gbx_core frameworks as well ** 
+
 Installation
 ------------
 1. **Database Setup**
@@ -63,4 +76,4 @@ Troubleshooting
 
 Support
 -------
-For further help, consult the documentation in each script file or reach out to the FiveM
+This mod is still in Alpha state and still working the code for best effect. 
