@@ -56,7 +56,7 @@ export const DEBUG_REPORT: Report = {
 		{
 			firstname: "John",
 			lastname: "Doe",
-			citizenid: "BUB193Z4A",
+			citizenid: "advanced193Z4A",
 			dob: Date.now(),
 		},
 	],

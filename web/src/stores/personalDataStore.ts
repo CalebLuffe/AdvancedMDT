@@ -4,7 +4,7 @@ import { Character } from "../typings";
 
 const DEBUG_CHARACTER: Character = {
 	citizenid: "1993201",
-	firstname: "Bubble",
+	firstname: "advancedble",
 	lastname: "Test",
 	role: "Chief",
 	grade: 4,

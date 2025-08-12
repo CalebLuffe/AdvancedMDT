@@ -33,7 +33,7 @@ for (let i = 0; i < 25; i++) {
 export const DEBUG_PROFILE: Profile = {
 	firstname: "John",
 	lastname: "Doe",
-	citizenid: "BUB193Z4A",
+	citizenid: "advanced193Z4A",
 	dob: Date.now(),
 	phoneNumber: "123456789",
 	notes: "<p></p>",
