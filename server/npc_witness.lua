@@ -1,7 +1,7 @@
 -- Advanced NPC Witness Statement Server Script
 
-RegisterNetEvent('AdvancedMDT:CreateWitnessStatement')
-AddEventHandler('AdvancedMDT:CreateWitnessStatement', function(npcNetId, crimeCoords, caseId, eventType)
+RegisterNetEvent('advanced:CreateWitnessStatement')
+AddEventHandler('advanced:CreateWitnessStatement', function(npcNetId, crimeCoords, caseId, eventType)
     local npcId = npcNetId
     local statement = ""
     if eventType == "gunfire" then

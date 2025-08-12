@@ -30,7 +30,7 @@ if Framework == 'QBCore' then
 
     -- QBCore-specific functions for job checks, inventory management, notifications etc.
     -- Example for getting player data (as shown in the previous response)
-    QBCore.Functions.CreateCallback('AdvancedMDT:GetPlayerData', function(source, cb)
+    QBCore.Functions.CreateCallback('advanced:GetPlayerData', function(source, cb)
         local Player = QBCore.Functions.GetPlayer(source)
         if Player then
             cb({

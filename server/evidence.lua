@@ -1,7 +1,7 @@
 -- Expanded Evidence Collection Server Script
 
-RegisterNetEvent('AdvancedMDT:CollectEvidence')
-AddEventHandler('AdvancedMDT:CollectEvidence', function(evidenceType, coords, caseId, description)
+RegisterNetEvent('advanced:CollectEvidence')
+AddEventHandler('advanced:CollectEvidence', function(evidenceType, coords, caseId, description)
     local src = source
     local identifier = GetPlayerIdentifier(src)
     local evidenceId = ('%s_%d'):format(evidenceType, os.time())

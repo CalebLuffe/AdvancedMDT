@@ -20,9 +20,9 @@ if Framework == 'ESX' then
             },
             function(rowsChanged)
                 if rowsChanged > 0 then
-                    TriggerClientEvent('AdvancedMDT:Client:EvidenceCollected', src, evidenceId, caseId)
+                    TriggerClientEvent('advanced:Client:EvidenceCollected', src, evidenceId, caseId)
                 else
-                    TriggerClientEvent('AdvancedMDT:Client:EvidenceCollectionFailed', src)
+                    TriggerClientEvent('advanced:Client:EvidenceCollectionFailed', src)
                 end
             end
         )
@@ -30,7 +30,7 @@ if Framework == 'ESX' then
 
     -- ESX-specific functions for job checks, inventory management, notifications etc.
     -- Example for getting player data (as shown in the previous response)
-    ESX.RegisterServerCallback('AdvancedMDT:GetPlayerData', function(source, cb)
+    ESX.RegisterServerCallback('advanced:GetPlayerData', function(source, cb)
         local xPlayer = ESX.GetPlayerFromId(source)
         if xPlayer then
             cb({

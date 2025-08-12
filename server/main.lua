@@ -23,8 +23,8 @@ function GenerateUniqueEvidenceId()
 end
 
 -- Server-side evidence logic
-RegisterServerEvent('AdvancedMDT:Server:CollectEvidence')
-AddEventHandler('AdvancedMDT:Server:CollectEvidence', function(evidenceType, coords, caseId)
+RegisterServerEvent('advanced:Server:CollectEvidence')
+AddEventHandler('advanced:Server:CollectEvidence', function(evidenceType, coords, caseId)
     local src = source
     local identifier = GetPlayerIdentifier(src) -- Placeholder, will be framework-specific
 
@@ -39,8 +39,8 @@ AddEventHandler('AdvancedMDT:Server:CollectEvidence', function(evidenceType, coo
 end)
 
 -- Server-side NPC Callout logic
-RegisterServerEvent('AdvancedMDT:Server:CreateNPCWitnessCallout')
-AddEventHandler('AdvancedMDT:Server:CreateNPCWitnessCallout', function(crimeSceneId, witnessCoords, witnessStatement)
+RegisterServerEvent('advanced:Server:CreateNPCWitnessCallout')
+AddEventHandler('advanced:Server:CreateNPCWitnessCallout', function(crimeSceneId, witnessCoords, witnessStatement)
     -- Store witness data in the database, linked to the crime scene ID
     MySQL.Async.execute("INSERT INTO witnesses (crime_scene_id, coords, statement) VALUES (@crime_scene_id, @coords, @statement)",
         {['@crime_scene_id'] = crimeSceneId, ['@coords'] = json.encode(witnessCoords), ['@statement'] = witnessStatement},

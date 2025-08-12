@@ -1,5 +1,5 @@
-RegisterNetEvent('AdvancedMDT:DetectWitnesses')
-AddEventHandler('AdvancedMDT:DetectWitnesses', function(crimeCoords, caseId)
+RegisterNetEvent('advanced:DetectWitnesses')
+AddEventHandler('advanced:DetectWitnesses', function(crimeCoords, caseId)
     local witnesses = FindNearbyNPCs(crimeCoords, 30.0)
     for _, npc in ipairs(witnesses) do
         local statement = GenerateWitnessStatement(npc, crimeCoords)
