@@ -9,7 +9,7 @@ local evidenceTypes = {
 }
 
 local function getActiveCaseId()
-    return exports["advancedmdt"]:GetActiveCaseId()
+    return exports["advanced"]:GetActiveCaseId()
 end
 
 local function detectEvidence()
@@ -17,7 +17,7 @@ local function detectEvidence()
         if ev.action() then
             local coords = GetEntityCoords(PlayerPedId())
             local caseId = getActiveCaseId()
-            TriggerServerEvent('AdvancedMDT:CollectEvidence', ev.type, coords, caseId, ev.desc)
+            TriggerServerEvent('advanced:CollectEvidence', ev.type, coords, caseId, ev.desc)
         end
     end
 end
@@ -29,8 +29,8 @@ Citizen.CreateThread(function()
     end
 end)
 
-RegisterNetEvent('AdvancedMDT:DetectEvidence')
-AddEventHandler('AdvancedMDT:DetectEvidence', function(evidenceType, coords, description)
+RegisterNetEvent('advanced:DetectEvidence')
+AddEventHandler('advanced:DetectEvidence', function(evidenceType, coords, description)
     local officer = GetPlayerServerId(PlayerId())
-    TriggerServerEvent('AdvancedMDT:CollectEvidence', evidenceType, coords, officer, description)
+    TriggerServerEvent('advanced:CollectEvidence', evidenceType, coords, officer, description)
 end)

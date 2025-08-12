@@ -23,7 +23,7 @@ if config.isDispatchEnabled then
 
     AddEventHandler('CEventGunShot', function(witnesses, ped)
         if IsPedCurrentWeaponSilenced(cache.ped) then return end
-            
+
         WaitTimer('Shooting', function()
             if cache.ped ~= ped then return end
 
@@ -36,9 +36,9 @@ if config.isDispatchEnabled then
             if witnesses and not isPedAWitness(witnesses, ped) then return end
 
             if cache.vehicle then
-                exports['bub-mdt']:VehicleShooting()
+                exports['advanced-mdt']:VehicleShooting()
             else
-                exports['bub-mdt']:Shooting()
+                exports['advanced-mdt']:Shooting()
             end
         end)
     end)
@@ -48,7 +48,7 @@ if config.isDispatchEnabled then
             if cache.ped ~= ped then return end
 
             local vehicle = GetVehiclePedIsUsing(ped, true)
-            exports['bub-mdt']:CarJacking(vehicle)
+            exports['advanced-mdt']:CarJacking(vehicle)
         end)
     end)
 
@@ -57,7 +57,7 @@ if config.isDispatchEnabled then
             if cache.ped ~= ped then return end
 
             local vehicle = GetVehiclePedIsUsing(ped, true)
-            exports['bub-mdt']:VehicleTheft(vehicle)
+            exports['advanced-mdt']:VehicleTheft(vehicle)
         end)
     end)
 
@@ -71,7 +71,7 @@ if config.isDispatchEnabled then
             if not isDead then return end
 
             if framework.isJobPolice() then
-                exports['bub-mdt']:OfficerDown()
+                exports['advanced-mdt']:OfficerDown()
             end
         end)
     end)
@@ -92,7 +92,7 @@ if config.isDispatchEnabled then
         AddEventHandler(event, function(_, ped)
             WaitTimer('Speeding', function()
                 local currentTime = GetGameTimer()
-                
+
                 if currentTime - SpeedTrigger < 10000 then
                     return
                 end
@@ -104,12 +104,12 @@ if config.isDispatchEnabled then
                         return
                     end
                 end
-                
+
                 if GetEntitySpeed(cache.vehicle) * 3.6 < (80 + math.random(0, 20)) then return end
 
                 if cache.ped ~= GetPedInVehicleSeat(cache.vehicle, -1) then return end
 
-                exports['bub-mdt']:SpeedingVehicle()
+                exports['advanced-mdt']:SpeedingVehicle()
                 SpeedTrigger = GetGameTimer()
             end)
         end)

@@ -1,7 +1,7 @@
 -- Advanced NPC Witness Detection Client Script
 
 local function getActiveCaseId()
-    return exports["advancedmdt"]:GetActiveCaseId()
+    return exports["advanced"]:GetActiveCaseId()
 end
 
 local function detectCrimeAndWitnesses()
@@ -15,7 +15,7 @@ local function detectCrimeAndWitnesses()
                 if dist < 25.0 and HasEntityClearLosToEntity(npc, playerPed, 17) then
                     local caseId = getActiveCaseId()
                     local eventType = IsPedShooting(playerPed) and "gunfire" or "melee"
-                    TriggerServerEvent('AdvancedMDT:CreateWitnessStatement', NetworkGetNetworkIdFromEntity(npc), playerCoords, caseId, eventType)
+                    TriggerServerEvent('advanced:CreateWitnessStatement', NetworkGetNetworkIdFromEntity(npc), playerCoords, caseId, eventType)
                 end
             end
         end

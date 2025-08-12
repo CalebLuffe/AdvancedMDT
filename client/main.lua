@@ -501,7 +501,7 @@ function CheckForEvidenceInteraction(playerCoords)
     -- you would trigger the server event to collect and link the evidence.
 
     -- Example: Triggering the collection event
-    -- TriggerServerEvent('AdvancedMDT:Server:CollectEvidence', "shellcasing", playerCoords, "CASE_XYZ")
+    -- TriggerServerEvent('advanced:Server:CollectEvidence', "shellcasing", playerCoords, "CASE_XYZ")
 end
 
 -- Client-side NPC Interaction for Witnesses (conceptual)
@@ -529,12 +529,12 @@ function DetectAndInteractWithWitnesses(playerCoords)
     -- witness statement generation and storage.
 
     -- Example: Triggering a server event for witness callout
-    -- TriggerServerEvent('AdvancedMDT:Server:CreateNPCWitnessCallout', "CRIME_SCENE_123", witnessCoords, "I saw a blue car speeding away.")
+    -- TriggerServerEvent('advanced:Server:CreateNPCWitnessCallout', "CRIME_SCENE_123", witnessCoords, "I saw a blue car speeding away.")
 end
 
 -- Handle evidence collected confirmation (or failed) from server
-RegisterNetEvent('AdvancedMDT:Client:EvidenceCollected')
-AddEventHandler('AdvancedMDT:Client:EvidenceCollected', function(evidenceId, caseId)
+RegisterNetEvent('advanced:Client:EvidenceCollected')
+AddEventHandler('advanced:Client:EvidenceCollected', function(evidenceId, caseId)
     if Framework == 'ESX' then
         ESX.ShowNotification('Evidence ' .. evidenceId .. ' collected and linked to case ' .. caseId)
     elseif Framework == 'QBCore' then
@@ -542,8 +542,8 @@ AddEventHandler('AdvancedMDT:Client:EvidenceCollected', function(evidenceId, cas
     end
 end)
 
-RegisterNetEvent('AdvancedMDT:Client:EvidenceCollectionFailed')
-AddEventHandler('AdvancedMDT:Client:EvidenceCollectionFailed', function()
+RegisterNetEvent('advanced:Client:EvidenceCollectionFailed')
+AddEventHandler('advanced:Client:EvidenceCollectionFailed', function()
     if Framework == 'ESX' then
         ESX.ShowNotification('Evidence collection failed.')
     elseif Framework == 'QBCore' then
