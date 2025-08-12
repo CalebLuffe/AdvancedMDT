@@ -1,9 +1,9 @@
-AdvancedMDT & Dispatch System for FiveM RP
+Advanced-MDT & Dispatch System for FiveM RP
 ==========================================
 
 Overview
 --------
-The Intention of the AdvancedMDT is to be a modular Mobile Data Terminal and Dispatch System for FiveM RP servers. 
+The Intention of the Advanced-MDT is to be a modular Mobile Data Terminal and Dispatch System for FiveM RP servers. 
 It integrates with emergency services (police, fire, EMS) and provides advanced features for evidence collection, case management, NPC witness generation, scenario tracking, and officer reputation. 
 The system should supports ESX, QBCore, and custom frameworks.
 
@@ -44,7 +44,7 @@ Installation
    - Ensure your database credentials are set for `oxmysql`.
 
 4. **Server Integration**
-   - Add `ensure advancedmdt` to your `server.cfg`.
+   - Add `ensure advanced-mdt` to your `server.cfg`.
    - Make sure `oxmysql` is installed and running.
 
 5. **NUI Integration**
